@@ -1,0 +1,21 @@
+#shipnote {
+	width: 100%;
+    margin-top: 20px;
+    margin-left: -30px;
+    padding: 15px 30px 20px;
+    background: #f1f2f3;
+    border-top: solid 1px #dadada;
+    border-bottom: solid 1px #dadada;
+}
+
+#shipnote label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#shipnote textarea {
+    height: 50px;
+    padding: 10px;
+    width: 400px;
+}

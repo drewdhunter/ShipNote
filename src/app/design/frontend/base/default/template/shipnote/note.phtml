@@ -1,0 +1,8 @@
+<?php if ($this->canShow()): ?>
+	<div id='shipnote'>
+        <div id="shipnoteContent">
+            <label for='shipnote-note'><?php echo $this->__(Mage::helper('shipnote')->getFrontendLabel()) ?></label>
+            <textarea id='shipnote-note' name='ship-note' class="input-text"></textarea>
+        </div>
+	</div>
+<?php endif; ?>

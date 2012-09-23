@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Dh
+ * @package    Dh_Shipnote
+ * @copyright  Copyright (c) 2012 Drew Hunter (http://drewhunter.net)
+ * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name='head'>
+            <action method="addItem" ifconfig="shipnote_options/basic_settings/enabled">
+                <type>skin_css</type>
+                <name>css/shipnote.css</name>
+            </action>
+        </reference>
+    </checkout_onepage_index>
+	<checkout_onepage_additional>
+        <reference name="root">
+            <block type="shipnote/note" output="toHtml" name="shipnote" as="note" template="shipnote/note.phtml" after='-' />
+        </reference>
+	</checkout_onepage_additional>
+</layout>

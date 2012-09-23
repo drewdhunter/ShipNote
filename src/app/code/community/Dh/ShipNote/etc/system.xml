@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @category   Dh
+ * @package    Dh_Shipnote
+ * @copyright  Copyright (c) 2012 Drew Hunter (http://drewhunter.net)
+ * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <tabs>
+        <shipnotes translate="label" module="shipnote">
+            <label>Ship Notes</label>
+            <sort_order>99999</sort_order>
+        </shipnotes>
+    </tabs> 
+    <sections>
+        <shipnote_options translate="label" module="shipnote">
+            <label>Ship Note Options</label>
+            <tab>shipnotes</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>  
+			<groups>
+                <basic_settings translate="label">
+                    <label>Basic Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>                
+					<fields>
+						<enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+						<frontend_label translate="label">
+							<label>Frontend Label</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>  
+							<comment>This will be the label shown to users during the checkout process</comment>
+						</frontend_label>
+					</fields>       
+                </basic_settings>
+            </groups>			
+        </shipnote_options>
+    </sections>     
+</config>

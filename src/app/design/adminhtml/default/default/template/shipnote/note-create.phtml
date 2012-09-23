@@ -1,0 +1,8 @@
+<div class="box-right entry-edit">
+	<div class="entry-edit-head"><h4><?php echo $this->__($this->getFrontendLabel()) ?></h4></div>
+	<fieldset id="order-deliverynote">
+		<label for="deliverynote-note"><?php echo $this->__($this->getFrontendLabel()) ?></label><br>
+		<?php $characterCount = $this->getCharacterCount(); ?>
+		<textarea cols="15" rows="2" id='deliverynote-note' name='deliverynote' style="width:98%; height:8em;" <?php if ($characterCount !== false): ?>class="validate-length maximum-length-<?php echo $characterCount ?>"<?php endif; ?>></textarea>
+	</fieldset>
+</div>
