@@ -32,8 +32,8 @@ class Dh_ShipNote_Block_Note extends Mage_Core_Block_Template
     {
         return Mage::getSingleton('checkout/session')->getQuote()
             ->getShippingAddress()
-            ->getShippingRatesCollection()->count();
-        ;
+            ->getShippingRatesCollection()
+            ->count();
     }
 
     /**
