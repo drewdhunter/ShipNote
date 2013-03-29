@@ -19,10 +19,8 @@ class Dh_ShipNote_Block_Adminhtml_Sales_Order_Note extends Mage_Adminhtml_Block_
     public function getNote()
     {
         if (null === $this->_note) {
-            $shipNoteId = $this->getOrder()->getData('ship_note_id');
-            if ($shipNoteId) {
-                $this->_note = Mage::getModel('shipnote/note')->load($shipNoteId);
-            }
+            $this->_note = Mage::getModel('shipnote/note')
+                ->loadByOrder($this->getOrder());
         }
         return $this->_note;
     }
