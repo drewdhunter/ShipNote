@@ -5,9 +5,14 @@ This extension provides a way for customers to notify store owners of any specia
 
 Feedback
 -------------------------
-Please send me any feedback - good or bad - to drewdhunter@gmail.com
+Please send me any feedback to drew@drewhunter.net
 
-
+Changelog
+------------------------
+0.0.1 - Initial Commit
+0.0.2 - Minor code refactor
+        Added new methods for loading notes by order
+        
 License
 -------------------------
 Licensed under http://creativecommons.org/licenses/by/3.0/ CC-BY 3.0
