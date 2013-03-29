@@ -1,6 +1,6 @@
 src/app/code/community/Dh/ShipNote                              app/code/community/Dh/ShipNote
 src/app/etc/modules/Dh_ShipNote.xml                             app/etc/modules/Dh_ShipNote.xml
-src/app/locale/en_GB                                            app/locale/en_GB
+src/app/locale/en_GB/*                                          app/locale/en_GB
 src/app/design/frontend/base/default/template/shipnote          app/design/frontend/base/default/template/shipnote
 src/app/design/frontend/base/default/layout/shipnote.xml        app/design/frontend/base/default/layout/shipnote.xml
 src/app/design/adminhtml/default/default/template/shipnote      app/design/adminhtml/default/default/template/shipnote
