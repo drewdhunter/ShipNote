@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @category   Dh
- * @package    Dh_Shipnote
- * @copyright  Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
- * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
+ * @category  Dh
+ * @package   Dh_ShipNote
+ * @copyright Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
+ * @license   http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
  */
 class Dh_ShipNote_Block_Note extends Mage_Core_Block_Template
 {
@@ -16,16 +16,12 @@ class Dh_ShipNote_Block_Note extends Mage_Core_Block_Template
      */
     public function canShow()
     {
-        if (false === Mage::helper('shipnote')->isEnabled()) {
-            return false;
-        }
-        if (0 >= $this->getRateCount()) {
-            return false;
-        }
-        return true;
+        return Mage::helper('shipnote')->isEnabled() || $this->getRateCount() < 1;
     }
 
     /**
+     * How many shipping rates are available
+     *
      * @return bool
      */
     public function getRateCount()
@@ -41,7 +37,7 @@ class Dh_ShipNote_Block_Note extends Mage_Core_Block_Template
      */
     public function _toHtml()
     {
-        if (false == $this->canShow()) {
+        if (false === $this->canShow()) {
             return '';
         }
         return parent::_toHtml();
