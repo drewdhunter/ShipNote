@@ -32,7 +32,7 @@
             <shipnote_setup>
                 <setup>
                     <module>Dh_ShipNote</module>
-                    <class>Dh_ShipNote_Model_Resource_Setup</class>
+                    <class>Mage_Sales_Model_Resource_Setup</class>
                 </setup>
             </shipnote_setup>
         </resources>

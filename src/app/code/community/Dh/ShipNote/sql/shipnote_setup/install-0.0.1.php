@@ -11,8 +11,6 @@
  */
 $installer = $this;
 
-$installer->startSetup();
-
 /**
  * Create table: shipnote_note
  */
