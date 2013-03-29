@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="tests/bootstrap.php"
+        stopOnFailure="false"
+        colors="true"
+        convertNoticesToExceptions="false"
+        convertWarningsToExceptions="false"
+        convertErrorsToExceptions="true"
+        syntaxCheck="true"
+        verbose="false">
+    <testsuite name="ShipNote Tests">
+        <directory suffix="Test.php">tests/unit/app/code/community/Dh/ShipNote</directory>
+    </testsuite>
+    <php>
+        <ini name="memory_limit" value="-1"/>
+        <ini name="date.timezone" value="Europe/London"/>
+        <ini name="session.use_cookies" value="0"/>
+    </php>
+</phpunit>
