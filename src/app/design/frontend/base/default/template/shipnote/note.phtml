@@ -1,8 +1,16 @@
+<!--
+/**
+ * @category   Dh
+ * @package    Dh_Shipnote
+ * @copyright  Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
+ * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
+ */
+-->
 <?php if ($this->canShow()): ?>
-	<div id='shipnote'>
-        <div id="shipnoteContent">
-            <label for='shipnote-note'><?php echo $this->__(Mage::helper('shipnote')->getFrontendLabel()) ?></label>
-            <textarea id='shipnote-note' name='ship-note' class="input-text"></textarea>
-        </div>
-	</div>
+<div id='shipnote'>
+    <div id="shipnoteContent">
+        <label for='shipnote-note'><?php echo $this->__(Mage::helper('shipnote')->getFrontendLabel()) ?></label>
+        <textarea id='shipnote-note' name='ship-note' class="input-text"></textarea>
+    </div>
+</div>
 <?php endif; ?>

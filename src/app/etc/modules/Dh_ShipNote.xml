@@ -3,15 +3,15 @@
 /**
  * @category   Dh
  * @package    Dh_Shipnote
- * @copyright  Copyright (c) 2012 Drew Hunter (http://drewhunter.net)
+ * @copyright  Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
  * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
  */
 -->
 <config>
     <modules>
         <Dh_ShipNote>
-            <active>true</active> 
-            <codePool>community</codePool> 
+            <active>true</active>
+            <codePool>community</codePool>
         </Dh_ShipNote>
     </modules>
 </config>

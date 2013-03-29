@@ -4,18 +4,19 @@
     </div>
     <div class="fieldset">
         <div id="order-shipnote">
-            <textarea style="width:98%; height:8em;" id="shipnote-note" name="order[ship_note]" rows="2" cols="15"><?php echo $this->__($this->getShipNote()) ?></textarea>
+            <textarea style="width:98%; height:8em;" id="shipnote-note" name="order[ship_note]" rows="2"
+                      cols="15"><?php echo $this->__($this->getShipNote()) ?></textarea>
         </div>
         <script type="text/javascript">
             AdminOrder.addMethods({
-                shipnoteFieldsBind : function(container){
-                    if ($(container)){
+                shipnoteFieldsBind:function (container) {
+                    if ($(container)) {
                         var fields = $(container).select('textarea');
-                        for(var i=0; i<fields.length; i++)
+                        for (var i = 0; i < fields.length; i++)
                             fields[i].observe('change', this.shipnoteFieldChange.bind(this))
                     }
                 },
-                shipnoteFieldChange : function(){
+                shipnoteFieldChange:function () {
                     this.saveData(this.serializeData('order-shipnote'));
                 }
             });

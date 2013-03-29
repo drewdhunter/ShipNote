@@ -3,86 +3,89 @@
 /**
  * @category   Dh
  * @package    Dh_Shipnote
- * @copyright  Copyright (c) 2012 Drew Hunter (http://drewhunter.net)
+ * @copyright  Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
  * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
  */
 -->
 <layout>
     <!-- Orders -->
-	<adminhtml_sales_order_view>
-		<reference name="order_tab_info">
+    <adminhtml_sales_order_view>
+        <reference name="order_tab_info">
             <action method="setTemplate">
                 <template>shipnote/sales/order/view/tab/info.phtml</template>
             </action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_view>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_view>
 
-	<!-- Invoices -->
-	<adminhtml_sales_order_invoice_new>
-		<reference name='form'>
+    <!-- Invoices -->
+    <adminhtml_sales_order_invoice_new>
+        <reference name='form'>
             <action method="setTemplate">
                 <template>shipnote/sales/order/invoice/create/form.phtml</template>
             </action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_invoice_new>
-	<adminhtml_sales_order_invoice_view>
-		<reference name='form'>
-			<action method="setTemplate">
-				<template>shipnote/sales/order/invoice/view/form.phtml</template>
-			</action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_invoice_view>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_invoice_new>
+    <adminhtml_sales_order_invoice_view>
+        <reference name='form'>
+            <action method="setTemplate">
+                <template>shipnote/sales/order/invoice/view/form.phtml</template>
+            </action>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_invoice_view>
 
-	<!-- Shipments -->
-	<adminhtml_sales_order_shipment_new>
-		<reference name='form'>
-			<action method="setTemplate">
-				<template>shipnote/sales/order/shipment/create/form.phtml</template>
-			</action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_shipment_new>
-	<adminhtml_sales_order_shipment_view>
-		<reference name='form'>
-			<action method="setTemplate">
-				<template>shipnote/sales/order/shipment/view/form.phtml</template>
-			</action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_shipment_view>
-	
-	<!-- Credt memos -->
-	<adminhtml_sales_order_creditmemo_new>
-		<reference name='form'>
-			<action method="setTemplate">
-				<template>shipnote/sales/order/creditmemo/create/form.phtml</template>
-			</action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_creditmemo_new>
-	<adminhtml_sales_order_creditmemo_view>
-		<reference name='form'>
-			<action method="setTemplate">
-				<template>shipnote/sales/order/creditmemo/view/form.phtml</template>
-			</action>
-			<block type="shipnote/adminhtml_sales_order_note" name="shipnote" output="toHtml" template="shipnote/note.phtml" />
-		</reference>
-	</adminhtml_sales_order_creditmemo_view>
+    <!-- Shipments -->
+    <adminhtml_sales_order_shipment_new>
+        <reference name='form'>
+            <action method="setTemplate">
+                <template>shipnote/sales/order/shipment/create/form.phtml</template>
+            </action>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_shipment_new>
+    <adminhtml_sales_order_shipment_view>
+        <reference name='form'>
+            <action method="setTemplate">
+                <template>shipnote/sales/order/shipment/view/form.phtml</template>
+            </action>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_shipment_view>
+
+    <!-- Credt memos -->
+    <adminhtml_sales_order_creditmemo_new>
+        <reference name='form'>
+            <action method="setTemplate">
+                <template>shipnote/sales/order/creditmemo/create/form.phtml</template>
+            </action>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_new>
+    <adminhtml_sales_order_creditmemo_view>
+        <reference name='form'>
+            <action method="setTemplate">
+                <template>shipnote/sales/order/creditmemo/view/form.phtml</template>
+            </action>
+            <block type="shipnote/adminhtml_sales_order_note" name="shipnote" output="toHtml"
+                   template="shipnote/note.phtml"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_view>
 
     <adminhtml_sales_order_create_index>
         <reference name="data">
-            <block type="shipnote/adminhtml_sales_order_create_shipnote" name="shipnote" template="shipnote/sales/order/create/shipnote.phtml" />
+            <block type="shipnote/adminhtml_sales_order_create_shipnote" name="shipnote"
+                   template="shipnote/sales/order/create/shipnote.phtml"/>
             <action method="setTemplate">
                 <template>shipnote/sales/order/create/data.phtml</template>
             </action>
         </reference>
     </adminhtml_sales_order_create_index>
     <adminhtml_sales_order_create_load_block_data>
-          <reference name="data">
-            <block type="shipnote/adminhtml_sales_order_create_shipnote" name="shipnote" template="shipnote/sales/order/create/shipnote.phtml" />
+        <reference name="data">
+            <block type="shipnote/adminhtml_sales_order_create_shipnote" name="shipnote"
+                   template="shipnote/sales/order/create/shipnote.phtml"/>
             <action method="setTemplate">
                 <template>shipnote/sales/order/create/data.phtml</template>
             </action>

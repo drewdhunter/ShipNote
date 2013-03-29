@@ -3,7 +3,7 @@
 /**
  * @category   Dh
  * @package    Dh_Shipnote
- * @copyright  Copyright (c) 2012 Drew Hunter (http://drewhunter.net)
+ * @copyright  Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
  * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
  */
 class Dh_ShipNote_Block_Note extends Mage_Core_Block_Template
