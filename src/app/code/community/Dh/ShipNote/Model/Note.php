@@ -16,10 +16,41 @@ class Dh_ShipNote_Model_Note extends Mage_Core_Model_Abstract
     }
 
     /**
+     * Load a ship note by order
+     *
+     * @param Mage_Sales_Model_Order $order
+     * @return bool|Dh_ShipNote_Model_Note
+     */
+    public function loadByOrder(Mage_Sales_Model_Order $order)
+    {
+        $shipNoteId = $order->getData('ship_note_id');
+        if (null !== $shipNoteId) {
+            return Mage::getModel('shipnote/note')
+                ->load($shipNoteId);
+        }
+        return false;
+    }
+
+    /**
+     * Load a ship note by order id
+     *
+     * @param $orderId
+     * @return bool|Dh_ShipNote_Model_Note
+     */
+    public function loadByOrderId($orderId)
+    {
+        $order = Mage::getModel('sales/order')->load($orderId);
+        if (null !== $order->getId()) {
+            return $this->loadByOrder($order);
+        }
+        return false;
+    }
+
+    /**
      * @return string
      */
     public function __toString()
     {
-        return $this->getNote();
+        return $this->getData('note');
     }
 }
